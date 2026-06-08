@@ -18,6 +18,7 @@ dependencies:
   flutter_inappwebview:
     git:
       url: https://github.com/pichillilorenzo/flutter_inappwebview
+      ref: 7ab5ae66796d9fbb25c8d2cb0cdf39bdc812fe85
   just_audio: ^0.10.5
 
 dev_dependencies:
