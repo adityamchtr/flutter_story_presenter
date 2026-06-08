@@ -10,7 +10,6 @@ import '../models/story_view_indicator_config.dart';
 import '../controller/flutter_story_controller.dart';
 import '../story_presenter/image_story_view.dart';
 import '../story_presenter/video_story_view.dart';
-import '../story_presenter/web_story_view.dart';
 import '../story_presenter/text_story_view.dart';
 import '../utils/smooth_video_progress.dart';
 import '../utils/story_utils.dart';
@@ -485,21 +484,6 @@ class _FlutterStoryPresenterState extends State<FlutterStoryPresenter>
                 if (mounted) {
                   setState(() {});
                 }
-              },
-            ),
-          ),
-        },
-        if (currentItem.storyItemType.isWeb) ...{
-          Positioned.fill(
-            child: WebStoryView(
-              storyItem: currentItem,
-              key: ValueKey('$currentIndex'),
-              onWebViewLoaded: (controller, loaded) {
-                isCurrentItemLoaded = loaded;
-                if (loaded) {
-                  _startStoryCountdown();
-                }
-                currentItem.webConfig?.onWebViewLoaded?.call(controller, loaded);
               },
             ),
           ),
